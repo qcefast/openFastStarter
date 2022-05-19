@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<FASTXML>
+  <eFAST_Version>2.0.0</eFAST_Version>
+  <Environment/>
+  <User>Genaro Hoppe</User>
+  <DateCreated>04/10/2022</DateCreated>
+  <RunDateTime/>
+  <NumOfTests>1</NumOfTests>
+  <TestSetName>Login to QC timesheet</TestSetName>
+  <RunID>testscriptsexecution_Selenium_1649617769105</RunID>
+  <TestType/>
+  <AUT/>
+  <TestScript>
+    <TestScriptNumber>1</TestScriptNumber>
+    <TestScriptGroup>eFast_Cloud_Smoketest</TestScriptGroup>
+    <TestScriptID>QCTimesheetSmoke1</TestScriptID>
+    <TestScriptName>Demo Login TestScript</TestScriptName>
+    <Description>QC Timesheet Smoke Test</Description>
+    <ExecutionStatus>No Run</ExecutionStatus>
+    <Message/>
+    <FunctionalTestStep>
+      <FTSNumber>1</FTSNumber>
+      <Name>Login demo example</Name>
+      <FunctionalArea>Login</FunctionalArea>
+      <Description>Login example</Description>
+      <ExecutionStatus>No Run</ExecutionStatus>
+      <params/>
+      <TestStep StepNumber="1" Name="Navigate to timesheet app" Description="test123" ObjectMap="QC_TIMESHEET" Page="title=QCFastcar Online Timesheet • qcfastcar.com" Frame="" Object="" Action="NAVIGATE" Data="qc_timesheet" FailType="" ScreenShot="True" ExecutionStatus="No Run" Message="" Other="" Tool="Selenium"/>
+      <TestStep StepNumber="2" Name="Enter demo  username" Description="Enter username" ObjectMap="QC_TIMESHEET" Page="title=QCFastcar Online Timesheet • qcfastcar.com" Frame="" Object="locator::Id=username" Action="ENTER_TEXT" Data="Testuser2" FailType="" ScreenShot="True" ExecutionStatus="No Run" Message="" Other="" Tool="Selenium"/>
+      <TestStep StepNumber="3" Name="Enter demo password" Description="Enter password" ObjectMap="QC_TIMESHEET" Page="title=QCFastcar Online Timesheet • qcfastcar.com" Frame="" Object="locator::Name=password" Action="ENTER_TEXT" Data="Password1" FailType="" ScreenShot="True" ExecutionStatus="No Run" Message="" Other="" Tool="Selenium"/>
+      <TestStep StepNumber="4" Name="Click Login" Description="Click Login" ObjectMap="QC_TIMESHEET" Page="title=QCFastcar Online Timesheet • qcfastcar.com" Frame="" Object="locator::Name=login" Action="CLICK" FailType="" ScreenShot="True" ExecutionStatus="No Run" Message="" Other="" Tool="Selenium"/>
+    </FunctionalTestStep>
+  </TestScript>
+</FASTXML>
