@@ -1,4 +1,4 @@
-package com.quart;
+package com.qcefast;
 
 import java.io.File;
 import java.util.*;
@@ -14,7 +14,7 @@ import com.qcefast.util.Fast;
 import com.qcefast.util.FastArgs;
 import com.qcefast.util.FastRunProperties;
 import com.qcefast.util.FastUtil;
-import com.quart.CustomSteps.CustomTestStep;
+import com.qcefast.CustomSteps.CustomTestStep;
 
 public class OpenFastStarter {
 
@@ -85,20 +85,24 @@ public class OpenFastStarter {
 									switch (tStep.getFailType()) {
 									case FAIL_TSTEP:
 										tStep.setEndTime(fastHub.getCurrentDateTime());
+										fastHub.sendTestStepStatus(tStep, runProperties.getSendStatuses());
 										continue;
 									case FAIL_FSTEP:
 										tStep.setEndTime(fastHub.getCurrentDateTime());
 										fStep.setEndTime(fastHub.getCurrentDateTime());
+										fastHub.sendFunctionalStepStatus(fStep, runProperties.getSendStatuses());
 										continue FSTEP_LEVEL;
 									case FAIL_TCASE:
 										tStep.setEndTime(fastHub.getCurrentDateTime());
 										fStep.setEndTime(fastHub.getCurrentDateTime());
 										tScript.setEndTime(fastHub.getCurrentDateTime());
+										fastHub.sendTestScriptStatus(tScript, runProperties.getSendStatuses());
 										continue SCRIPT_LEVEL;
 									case FAIL_TSUITE:
 										tStep.setEndTime(fastHub.getCurrentDateTime());
 										fStep.setEndTime(fastHub.getCurrentDateTime());
 										tScript.setEndTime(fastHub.getCurrentDateTime());
+										fastHub.sendTestSuiteStatus(fastXml, runProperties.getSendStatuses());
 										break SCRIPT_LEVEL;
 									default:
 										break;
@@ -126,6 +130,7 @@ public class OpenFastStarter {
 			}
 		} catch (FastException e) {
 			e.printStackTrace();
+			System.exit(1);
 		}
 		
 		Status worstStatus = FastUtil.getWorstStatus(fastXmlStatuses);
