@@ -1,4 +1,4 @@
-package com.quart.CustomSteps;
+package com.qcefast.CustomSteps;
 
 import com.qcefast.enums.Status;
 import com.qcefast.exceptions.FastException;
@@ -11,7 +11,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.quart.constants.CustomActions;
+import com.qcefast.constants.CustomActions;
 
 public class CustomTestStep extends TestStep {
 
@@ -30,7 +30,7 @@ public class CustomTestStep extends TestStep {
 		FastElement fastElement = null;
 		WebDriver webDriver = fastDriver.getWebDriver();
 		WebElement element = null;
-		
+		//Examples of how to develop custom actions
 		switch (customAction) {
 			case CUSTOM_ENTER_TEXT:
 				fastElement = new FastElement(fastDriver);
@@ -44,11 +44,6 @@ public class CustomTestStep extends TestStep {
 			case CUSTOM_ENTER_TEXT_SELENIUM:
 				element = webDriver.findElement(By.id("{enter_id}"));
 				element.sendKeys(getData());
-				setStatus(Status.PASSED);
-				break;
-			case SEND_TAB_KEY_ON_WORKSPACE_NAME:
-				element = webDriver.findElement(By.id("workspace-name"));
-				element.sendKeys(Keys.TAB);
 				setStatus(Status.PASSED);
 				break;
 			default:
