@@ -1,4 +1,4 @@
-package com.quart.constants;
+package com.qcefast.constants;
 
 public enum CustomActions {
 

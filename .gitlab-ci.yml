@@ -10,5 +10,5 @@ test:
     - test
   script:
     - mvn compile
-    - mvn exec:java "-Dexec.mainClass=com.quart.OpenFastStarter" "-Dexec.args=--fastRunConfig properties\fast-runconfig.properties --envRunConfig properties\env-runconfig.properties --testDriverRunConfig properties\test-driver-runconfig.properties" -e
+    - mvn exec:java "-Dexec.mainClass=com.qcefast.OpenFastStarter" "-Dexec.args=--fastRunConfig properties\fast-runconfig.properties --envRunConfig properties\env-runconfig.properties --testDriverRunConfig properties\test-driver-runconfig.properties" -e
 
