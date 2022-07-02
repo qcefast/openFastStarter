@@ -35,7 +35,7 @@ public class CustomTestStep extends TestStep {
 			case CUSTOM_ENTER_TEXT:
 				fastElement = new FastElement(fastDriver);
 				//This line mimicks how the Fast framework sets properties to find the object
-				fastElement.setFastElementProperties(FastUtil.getProperties(getObject(), getFastRunProperties().getDelimiter()));
+				fastElement.setFastElementProperties(FastUtil.getProperties(getObject()));
 
 				fastElement.findMe();
 				fastElement.enterText(getData());
