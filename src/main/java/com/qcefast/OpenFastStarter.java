@@ -131,7 +131,6 @@ public class OpenFastStarter {
 					}
 				}
 				fastXml.setEndTime(fastHub.getCurrentDateTime());
-//				fastXml.setStatus(fastHub.resolveTestSuiteStatus(fastXml.getTestScripts()));
 				fastHub.writeHtmlReport(fastXml, fastHub.getFastRunProperties());
 				fastXml.setStatus(fastHub.getWorstTestScriptStatus(fastXml.getTestScripts()));
 				fastHub.sendTestSuiteStatus(fastXml, runProperties.getSendStatuses());
